@@ -73,7 +73,7 @@ pub fn calculate_dial_rotations(filename: &str) -> Result<i32, Box<dyn std::erro
         }
 
         if current_position < 0 {
-            current_position = (current_position + 100) % 100;
+            current_position = (current_position + 1_000_000) % 100;
         }
 
         if current_position == 0 {
